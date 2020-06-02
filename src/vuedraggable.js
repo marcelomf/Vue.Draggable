@@ -103,7 +103,7 @@ function getComponentAttributes($attrs, componentData) {
   return attributes;
 }
 
-const eventsListened = ["Start", "Add", "Remove", "Update", "End"];
+const eventsListened = ["Start", "Add", "Remove", "Update", "End", "Select", "Deselect"];
 const eventsToEmit = ["Choose", "Unchoose", "Sort", "Filter", "Clone"];
 const readonlyProperties = ["Move", ...eventsListened, ...eventsToEmit].map(
   evt => "on" + evt
@@ -610,6 +610,14 @@ const draggableComponent = {
       evt.items.forEach(Sortable.utils.deselect);
       this.computeIndexes();
       draggingElement = null;
+    },
+
+    onDragSelect(evt) {
+      return evt
+    },
+
+    onDragDeselect(evt) {
+      return evt
     }
   }
 };

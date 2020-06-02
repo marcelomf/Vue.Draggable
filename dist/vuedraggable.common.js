@@ -2571,8 +2571,8 @@ module.exports = Object.keys || function keys(O) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return removeNode; });
 /* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("a481");
 /* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _home_divinespear_Documents_workspace_private_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("4aa6");
-/* harmony import */ var _home_divinespear_Documents_workspace_private_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_divinespear_Documents_workspace_private_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _home_marcelo_Projetos_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("4aa6");
+/* harmony import */ var _home_marcelo_Projetos_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_marcelo_Projetos_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -2587,7 +2587,7 @@ function getConsole() {
 var console = getConsole();
 
 function cached(fn) {
-  var cache = _home_divinespear_Documents_workspace_private_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1___default()(null);
+  var cache = _home_marcelo_Projetos_Vue_Draggable_node_modules_babel_runtime_corejs2_core_js_object_create__WEBPACK_IMPORTED_MODULE_1___default()(null);
 
   return function cachedFn(str) {
     var hit = cache[str];
@@ -3316,7 +3316,7 @@ function getComponentAttributes($attrs, componentData) {
   return attributes;
 }
 
-var eventsListened = ["Start", "Add", "Remove", "Update", "End"];
+var eventsListened = ["Start", "Add", "Remove", "Update", "End", "Select", "Deselect"];
 var eventsToEmit = ["Choose", "Unchoose", "Sort", "Filter", "Clone"];
 var readonlyProperties = ["Move"].concat(eventsListened, eventsToEmit).map(function (evt) {
   return "on" + evt;
@@ -3860,6 +3860,12 @@ var draggableComponent = {
       evt.items.forEach(external_commonjs_sortablejs_commonjs2_sortablejs_amd_sortablejs_root_Sortable_default.a.utils.deselect);
       this.computeIndexes();
       draggingElement = null;
+    },
+    onDragSelect: function onDragSelect(evt) {
+      return evt;
+    },
+    onDragDeselect: function onDragDeselect(evt) {
+      return evt;
     }
   }
 };
